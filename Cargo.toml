@@ -1,0 +1,29 @@
+[package]
+name = "Rustree"
+version = "0.1.0"
+authors = ["Imperivox <imperivox@gmail.com>"]
+description = "A simple Git branch management tool"
+license = "MIT"
+repository = "https://github.com/imperivox/rustree"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+git2 = "0.18"
+chrono = "0.4"
+colored = "2.0"
+dialoguer = "0.11"
+indicatif = "0.17"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+dirs = "5.0.1"
+
+[lib]
+name = "rustree"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rtree"
+path = "src/main.rs"
